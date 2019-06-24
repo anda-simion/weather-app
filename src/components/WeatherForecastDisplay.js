@@ -1,6 +1,5 @@
 import React from 'react';
 import Forecast from './Forecast';
-import { isObjEmpty} from '../utils';
 
 const WeatherForecastDisplay = ({error, forecast}) => {
     
@@ -8,10 +7,15 @@ const WeatherForecastDisplay = ({error, forecast}) => {
     return (
         <div>
             {
-                error ?  <p>{error}</p> : null
+                error ?  
+                    <div>
+                        <p>{error}</p>
+                    </div>    
+                    : 
+                    null
             }
             {
-                !isObjEmpty(forecast) ? <Forecast  forecast={forecast}/> : null
+                forecast && forecast.name ? <Forecast  forecast={forecast}/> : null
             }
         </div>
     )
