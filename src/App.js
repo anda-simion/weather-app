@@ -1,6 +1,5 @@
 import React from 'react';
 import WeatherForm from './components/WeatherForm';
-import WeatherForecastDisplay from './components/WeatherForecastDisplay';
 import './App.css';
 
 function App() {
@@ -8,7 +7,6 @@ function App() {
     <div className="App">
       <p>Weather</p>
       <WeatherForm />
-      <WeatherForecastDisplay />
     </div>
   );
 }
