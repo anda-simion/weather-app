@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import WeatherForecastDisplay from './WeatherForecastDisplay';
 import { connect } from 'react-redux';
 import  fetchForecast from '../redux/actions/fetchForecast';
+import { Spin } from 'antd';
+import 'antd/dist/antd.css';
 
 
 export class WeatherForm extends Component {
@@ -43,7 +45,7 @@ export class WeatherForm extends Component {
                 <div>
                     {
                         this.props.pending ? 
-                            <p>Loading</p> 
+                            <Spin  size="large"/>
                             : 
                             <WeatherForecastDisplay 
                                 error={this.props.error}
