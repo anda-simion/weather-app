@@ -20,7 +20,7 @@ export class WeatherForm extends Component {
     handleSubmit(e) {
         e.preventDefault();
         this.props.fetchForecast(this.state.city);
-        console.log("props from submit in WeatherForm", this.props)
+        this.setState({city: ""})
     };
 
     handleChange(e) {
@@ -43,6 +43,8 @@ export class WeatherForm extends Component {
                     />
                 </form>
                 <div>
+                    <br/>
+                    <br/>
                     {
                         this.props.pending ? 
                             <Spin  size="large"/>
