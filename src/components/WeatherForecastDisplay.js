@@ -2,8 +2,6 @@ import React from 'react';
 import Forecast from './Forecast';
 
 const WeatherForecastDisplay = ({error, forecast}) => {
-    
-    console.log('props from WeatherForecastDisplay', error, forecast);
     return (
         <div>
             {

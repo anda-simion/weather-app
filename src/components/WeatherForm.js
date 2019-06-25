@@ -28,7 +28,6 @@ export class WeatherForm extends Component {
     };
 
     render() {
-        console.log("props from WeatherForm", this.props)
         return (
             <React.Fragment>
                 <form onSubmit={this.handleSubmit}>

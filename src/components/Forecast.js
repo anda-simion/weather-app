@@ -2,7 +2,6 @@ import React from 'react';
 import { Card } from 'antd';
 
 const Forecast = ({forecast}) => {
-    
     return (
         <div style={{display: "inline-block"}}>
             <Card title={`City: ${forecast.name}`} style={{ width: 300 }}>

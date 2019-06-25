@@ -14,7 +14,6 @@ const fetchForecast = (city) => {
             dispatch(fetchForecastSuccess(forecast))
         })
         .catch(error => {
-            console.log(error)
             dispatch(fetchForecastError(error.message))
         })
     }
